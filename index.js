@@ -27,7 +27,7 @@ const questions = () => {
     },
     {
         type: 'input',
-        name: 'Github',
+        name: 'Engineer',
         message: 'What is your Github Repo?',
     },
     {
@@ -37,7 +37,12 @@ const questions = () => {
     },
     {
         type: 'input',
-        name: '',
-        message: '?',
+        name: 'Intern',
+        message: 'What school did you go to?',
+    },
+    {
+        type: 'input',
+        name: 'Manager',
+        message: 'What is your office Number?',
     }
 }
