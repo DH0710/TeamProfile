@@ -27,10 +27,17 @@ const questions = () => {
     },
     {
         type: 'input',
+        name: 'Github',
+        message: 'What is your Github Repo?',
+    },
+    {
+        type: 'input',
+        name: 'id',
+        message: 'What is your ID?',
+    },
+    {
+        type: 'input',
         name: '',
-        message: '',
+        message: '?',
     }
-
-
-
 }
