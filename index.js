@@ -128,27 +128,73 @@ const createEngineer = async () => {
 
     const engineerQuestions = [
         {
-            type: 'input', 
-            message: 'PLease enter Engineer name', 
+            type: 'input',
+            message: 'PLease enter Engineer name',
             name: 'name',
             validate: validateInput
-        }, 
-        {
-            type:'input', 
-            message:'Please enter engineer email',
-            name: 'email', 
-            validate: validateInput,
-        }, 
+        },
         {
             type: 'input',
-            message: 'Enter engineer Github profile', 
-            name: 'email', 
+            message: 'Please enter engineer email',
+            name: 'email',
+            validate: validateInput,
+        },
+        {
+            type: 'input',
+            message: 'Enter engineer Github profile',
+            name: 'email',
+            validate: validateInput,
+        },
+        {
+            type: 'input',
+            message: 'Enter engineer ID',
+            name: 'ID'
+        },
+    ]
+
+
+
+    const engineerAnswer = await inquirer.prompt(engineerQuestions)
+
+    const engineer = new Engineer(engineerAnswers)
+
+    employees.push(engineer);
+
+};
+
+const createIntern = async () => {
+
+    const internQuestions = [
+        {
+            type: 'input',
+            message:'Enter Intern name',
+            name: 'name', 
             validate: validateInput, 
-        }, 
+        },
+        {
+            type: 'input', 
+            message: 'Enter Intern school name',
+            name: 'school',
+            validate: validateInput,
+        },
         {
             type:'input',
-            message:'Enter engineer ID', 
-            name: 'ID'
-        }, 
-    ]
+            mesaage:'Enter Intern email',
+            name:'email',
+            validate: validateInput,
+        },
+    ];
+
+    const internAnswers = await inquirer.prompt(internQuestions);
+    
+    const intern = new Intern(internAnsers);
+
+    employees.push(intern);
+
+};
+
+init();
+
+
+    
 }
